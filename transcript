@@ -1,0 +1,37 @@
+# Compile of testbench.v failed with 6 errors.
+# Compile of fsm_timer_demo.v failed with 6 errors.
+# Compile of fsm_timer_demo.v failed with 3 errors.
+# Compile of fsm_timer_demo.v failed with 1 errors.
+# Compile of fsm_timer_demo.v was successful.
+# Compile of testbench.v failed with 1 errors.
+# Compile of testbench.v failed with 1 errors.
+# Compile of testbench.v failed with 1 errors.
+# Error opening C:/FSM_timer_demo/(vlog-13069) C:/FSM_timer_demo/testbench.v
+# Path name 'C:/FSM_timer_demo/(vlog-13069) C:/FSM_timer_demo/testbench.v' doesn't exist.
+# Compile of testbench.v failed with 1 errors.
+# Compile of testbench.v failed with 1 errors.
+# Compile of testbench.v was successful.
+vsim work.testbench
+# vsim work.testbench 
+# Start time: 14:23:08 on May 11,2026
+# Loading work.testbench
+# Loading work.timer_demo
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'timer'. The port definition is at: C:/FSM_timer_demo/fsm_timer_demo.v(17).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/dut File: C:/FSM_timer_demo/testbench.v Line: 17
+# ** Error: (vsim-8378) Port size (4) does not match connection size (3) for implicit .name connection port 'state'. The port definition is at: C:/FSM_timer_demo/fsm_timer_demo.v(17).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/dut File: C:/FSM_timer_demo/testbench.v Line: 17
+# Error loading design
+# End time: 14:23:08 on May 11,2026, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 19
+vsim work.testbench
+# vsim work.testbench 
+# Start time: 14:23:17 on May 11,2026
+# Loading work.testbench
+# Loading work.timer_demo
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'timer'. The port definition is at: C:/FSM_timer_demo/fsm_timer_demo.v(17).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/dut File: C:/FSM_timer_demo/testbench.v Line: 17
+# ** Error: (vsim-8378) Port size (4) does not match connection size (3) for implicit .name connection port 'state'. The port definition is at: C:/FSM_timer_demo/fsm_timer_demo.v(17).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/dut File: C:/FSM_timer_demo/testbench.v Line: 17
+# Error loading design
+# End time: 14:23:17 on May 11,2026, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 2

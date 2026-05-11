@@ -1,0 +1,57 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA/20.1
+vtestbench
+!s110 1778480567
+!i10b 1
+!s100 1jGBz2fPO^^U]b[F=OCSG2
+Z0 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I7Nb<hkTUDCWGmZEDnW8=E3
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dC:/FSM_timer_demo
+w1778480565
+8C:/FSM_timer_demo/testbench.v
+FC:/FSM_timer_demo/testbench.v
+!i122 1
+L0 5 44
+Z3 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1778480566.000000
+!s107 C:/FSM_timer_demo/testbench.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/FSM_timer_demo/testbench.v|
+!i113 1
+Z4 o-work work
+Z5 tCvgOpt 0
+vtimer_demo
+!s110 1778480039
+!i10b 1
+!s100 :dzkjh7_32Io^<1g>]Kie3
+R0
+IMX?JI28R9G2lSeTIQKQ273
+R1
+R2
+w1778480037
+8C:/FSM_timer_demo/fsm_timer_demo.v
+FC:/FSM_timer_demo/fsm_timer_demo.v
+!i122 0
+L0 17 64
+R3
+r1
+!s85 0
+31
+!s108 1778480039.000000
+!s107 C:/FSM_timer_demo/fsm_timer_demo.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/FSM_timer_demo/fsm_timer_demo.v|
+!i113 1
+R4
+R5

@@ -1,0 +1,48 @@
+//testbench for fsm_timer_demo
+
+
+	// testbench fortimer_demo
+module testbench;
+	// tb signals
+	reg t;
+	reg clk;
+	reg ovr;
+	reg rst_n;
+	wire out;
+	wire timer;
+	wire [2:0] state;
+	
+	
+	// instatntiate timer_demo
+	timer_demo dut(
+	.out(out),
+	.timer(timer),
+	.state,
+	.t,
+	.clk,
+	.ovr,
+	.rst_n
+	);
+	
+	// apply stimuli
+	initial clk = 0;
+	always #1 clk = ~clk;
+	
+	initial begin 
+		rst_n = 0;
+	repeat(3) @(negedge clk);
+	rst_n = 1;
+	
+	//input:0110110(overlap twice)
+	t = 0; @(negedge clk); 
+	t = 1; @(negedge clk); 
+	t = 1; @(negedge clk); 
+	t = 0; @(negedge clk); //first detection
+	t = 1; @(negedge clk); 
+	t = 1; @(negedge clk); 
+	t = 0; @(negedge clk); 
+	t = 0; @(negedge clk); //second detection
+	end
+	
+	
+endmodule
