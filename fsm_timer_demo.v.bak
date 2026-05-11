@@ -33,12 +33,12 @@ module timer_demo(out,timer,state,t,clk,ovr,rst_n);
 	reg [3:0] pre; //pre state
 	
 	// input block
-	always @(in,pre)begin
+	always @(t,pre)begin
 	 case (pre) 
-		S0: nxt = in? S1:S0;
-		S1: nxt = in? S1:S2;
-		S2: nxt = in? S3:S0;
-		S3: nxt = in? S1:S0;
+		S0: nxt = t? S1:S0;
+		S1: nxt = t? S1:S2;
+		S2: nxt = t? S3:S0;
+		S3: nxt = t? S1:S0;
 		default: nxt = S0;
 		endcase
 	end

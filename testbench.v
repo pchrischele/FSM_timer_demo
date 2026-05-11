@@ -2,47 +2,56 @@
 
 
 	// testbench fortimer_demo
+
+
 module testbench;
-	// tb signals
-	reg t;
-	reg clk;
-	reg ovr;
-	reg rst_n;
-	wire out;
-	wire timer;
-	wire [2:0] state;
-	
-	
-	// instatntiate timer_demo
-	timer_demo dut(
-	.out(out),
-	.timer(timer),
-	.state,
-	.t,
-	.clk,
-	.ovr,
-	.rst_n
-	);
-	
-	// apply stimuli
-	initial clk = 0;
-	always #1 clk = ~clk;
-	
-	initial begin 
-		rst_n = 0;
-	repeat(3) @(negedge clk);
-	rst_n = 1;
-	
-	//input:0110110(overlap twice)
-	t = 0; @(negedge clk); 
-	t = 1; @(negedge clk); 
-	t = 1; @(negedge clk); 
-	t = 0; @(negedge clk); //first detection
-	t = 1; @(negedge clk); 
-	t = 1; @(negedge clk); 
-	t = 0; @(negedge clk); 
-	t = 0; @(negedge clk); //second detection
-	end
-	
-	
+
+ // tb signals
+ reg ovr;
+ reg clk;
+ reg rst_n;
+ wire out;
+ wire [1:0] state;
+
+ // instantiate FSM_Timer_Demo
+ FSM_Timer_Demo dut (
+   .out(out),
+   .state(state),
+   .ovr(ovr),
+   .clk(clk),
+   .rst_n(rst_n)
+ );
+
+ // clock generation
+ initial begin
+    clk = 0;
+    forever #1 clk = ~clk;
+ end
+
+ // apply stimuli
+ initial begin
+
+    // initialize signals
+    rst_n = 0;
+    ovr   = 0;
+
+    // hold reset
+    repeat(3) @(negedge clk);
+
+    // release reset
+    rst_n = 1;
+
+    // allow normal state transitions
+    repeat(12) @(negedge clk);
+
+    // activate override
+    ovr = 1;
+    repeat(4) @(negedge clk);
+
+    // deactivate override
+    ovr = 0;
+    repeat(8) @(negedge clk);
+
+ end
+
 endmodule
