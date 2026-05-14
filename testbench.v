@@ -1,4 +1,4 @@
-// testbench for fsm_timer_demo
+// testbench for seq_timer
 module testbench;
   // tb signals
 reg        ovr;
